@@ -12,11 +12,15 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::group(
     ['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]],
     function()
     {
+        // Login Page
+        Route::get('/', function () {
+            return view('dashboard.auth.login');
+        });
+
         Route::group(['prefix' => 'admin', 'namespace' => 'Dashboard', 'middleware' => 'auth'], function () {
 
             // Users Routes

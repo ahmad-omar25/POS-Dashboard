@@ -38,10 +38,12 @@
         type="text/javascript"></script>
 <script src="{{asset('dashboard/js/scripts/extensions/date-time-dropper.js')}}" type="text/javascript"></script>
 <!-- END PAGE LEVEL JS-->
-
+<!-- Jquery Number-->
+<script src="{{asset('dashboard/js/jquery/jquery.number.min.js')}}" type="text/javascript"></script>
 <script src="{{asset('dashboard/js/scripts/forms/checkbox-radio.js')}}" type="text/javascript"></script>
 <script src="{{asset('dashboard/js/scripts/extensions/block-ui.js')}}" type="text/javascript"></script>
 <script src="{{asset('dashboard/js/scripts/modal/components-modal.js')}}" type="text/javascript"></script>
+<script src="{{asset('dashboard/js/custom/order.js')}}" type="text/javascript"></script>
 
 
 

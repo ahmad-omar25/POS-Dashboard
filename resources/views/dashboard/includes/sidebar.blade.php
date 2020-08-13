@@ -1,7 +1,7 @@
 <div class="main-menu menu-fixed menu-light menu-accordion    menu-shadow " data-scroll-to-active="true">
     <div class="main-menu-content">
         <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-            <li class="dashboard"><a><i class="la la-home"></i><span>{{__('global.dashboard')}}</span></a></li>
+            <li class="dashboard"><a href="{{route('admin')}}"><i class="la la-home"></i><span>{{__('global.dashboard')}}</span></a></li>
             @if(auth()->user()->hasPermission('categories_read'))
                 <li class="dashboard"><a href="{{route('categories.index')}}"><i class="la la-navicon"></i><span>{{__('dashboard.categories.title')}}</span></a></li>
             @endif

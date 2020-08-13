@@ -62,7 +62,14 @@ return [
     // Categories Languages
     'clients' => [
         'orders' => [
+            'purchase_price' => 'السعر',
+            'add' => 'اضف',
+            'stock' => 'المخزن',
             'title' => 'الطلبات',
+            'product' => 'المنتج',
+            'quantity' => 'الكمية',
+            'total-price' => 'المجموع',
+            'delete' => 'حذف',
             'title_singular' => 'طلب',
             'personal_information' => 'بيانات الطلب',
             'create' => 'انشاء طلب',

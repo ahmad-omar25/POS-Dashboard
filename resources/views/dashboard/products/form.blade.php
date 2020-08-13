@@ -55,7 +55,7 @@
         @php $input = "purchase_price" @endphp
         <div class="form-group col-12 mb-2">
             <label for="{{$input}}">{{__('dashboard.'.$routeName.'.purchase_price')}}</label>
-            <input id="{{$input}}" class="form-control @error($input) is-invalid @enderror" name="{{$input}}"
+            <input id="{{$input}}" class="form-control @error($input) is-invalid @enderror" step="0.01" name="{{$input}}"
                    value="{{isset($row) ? $row->purchase_price : old($input)}} ">
             @error($input)
             <span class="invalid-feedback" role="alert">
@@ -68,7 +68,7 @@
         @php $input = "sale_price" @endphp
         <div class="form-group col-12 mb-2">
             <label for="{{$input}}">{{__('dashboard.'.$routeName.'.sale_price')}}</label>
-            <input id="{{$input}}" class="form-control @error($input) is-invalid @enderror" name="{{$input}}"
+            <input id="{{$input}}" class="form-control @error($input) is-invalid @enderror" step="0.01" name="{{$input}}"
                    value="{{isset($row) ? $row->sale_price : old($input)}} ">
             @error($input)
             <span class="invalid-feedback" role="alert">
@@ -81,7 +81,7 @@
         @php $input = "stock" @endphp
         <div class="form-group col-12 mb-2">
             <label for="{{$input}}">{{__('dashboard.'.$routeName.'.stock')}}</label>
-            <input id="{{$input}}" class="form-control @error($input) is-invalid @enderror" name="{{$input}}"
+            <input id="{{$input}}" class="form-control @error($input) is-invalid @enderror" step="0.01" name="{{$input}}"
                    value="{{isset($row) ? $row->stock : old($input)}} ">
             @error($input)
             <span class="invalid-feedback" role="alert">
