@@ -9,6 +9,7 @@ $(document).ready(function () {
         var html =
             `<tr>
                 <td>${name}</td>
+                <input type="hidden" name="products[]" value="${id}">
                 <td><input type="number" name="quantities[]" data-price="${price}" class="form-control product-quantity" min="1" value="1"></td>
                 <td class="product-price">${price}</td>
                 <td><button class="btn btn-danger btn-sm remove-product-btn" data-id="${id}"><span class="la la-trash-o"></span></button></td>
@@ -33,7 +34,7 @@ $(document).ready(function () {
         // Change Product Quantity
         $('body').on('keyup change','.product-quantity', function () {
             var quantity = parseInt($(this).val());
-            var price = $(this).data('price');
+            var price = parseFloat($(this).data('price').replace(/,/g, ''));
             $(this).closest('tr').find('.product-price').html($.number(quantity * price, 2));
             calculate_total();
         });
@@ -57,3 +58,4 @@ function calculate_total() {
         $('#add-order-btn').addClass('disabled');
     }
 }
+

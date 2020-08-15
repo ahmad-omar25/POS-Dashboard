@@ -22,34 +22,44 @@ class OrderController extends Controller
         $this->middleware('permission:orders_delete')->only('destroy');
     }
 
-    public function index() {
+    public function index()
+    {
 
     }// end of index
 
     public function create(Client $client)
     {
         $routeName = 'clients.orders';
-        return view('dashboard.clients.orders.create', compact('routeName'));
+        return view('dashboard.clients.orders.create', compact('routeName', 'client'));
     }// end of create
 
-    public function store(Request $request, Client $client) {
-
+    public function store(Request $request, Client $client)
+    {
+        $routeName = 'clients.orders';
+        $order = $client->orders()->create([]);
+        foreach ($request->input('products') as $index => $product) {
+            $order->products()->attach($product, ['quantity' => $request->input('quantities')[$index]]);
+        }
     }// end of store
 
-    public function edit(Client $client, Order $order) {
+    public function edit(Client $client, Order $order)
+    {
 
     }// end of edit
 
-    public function update(Request $request, Client $client, Order $order) {
+    public function update(Request $request, Client $client, Order $order)
+    {
 
     }// end of update
 
-    public function destroy(Client $client, Order $order) {
+    public function destroy(Client $client, Order $order)
+    {
 
     }// end of destroy
 
     // Get Route Name Model
-    protected function routeName() {
+    protected function routeName()
+    {
         return Str::plural(strtolower(class_basename($this->model)));
     }
 }
