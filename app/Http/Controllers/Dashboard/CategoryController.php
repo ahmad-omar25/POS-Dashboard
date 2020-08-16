@@ -22,10 +22,11 @@ class CategoryController extends DashboardController
     public function index(Request $request)
     {
         $routeName = $this->routeName();
+        $categories = Category::get();
         $rows = $this->model::when($request->search, function ($query) use ($request) {
             return $query->whereTranslationLike('name', '%' . $request->input('search') . '%');
         })->latest()->paginate(5);
-        return view('dashboard.'.$routeName.'.index', compact('rows', 'routeName'));
+        return view('dashboard.'.$routeName.'.index', compact('rows', 'routeName', 'categories'));
     }
 
     public function store(Store $request) {

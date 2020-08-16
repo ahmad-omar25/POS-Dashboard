@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use App\Models\Client;
 use App\Models\Order;
+use App\Models\Product;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -29,17 +31,28 @@ class OrderController extends Controller
 
     public function create(Client $client)
     {
+        $categories = Category::get();
         $routeName = 'clients.orders';
-        return view('dashboard.clients.orders.create', compact('routeName', 'client'));
+        return view('dashboard.clients.orders.create', compact('routeName', 'client', 'categories'));
     }// end of create
 
     public function store(Request $request, Client $client)
     {
         $routeName = 'clients.orders';
         $order = $client->orders()->create([]);
-        foreach ($request->input('products') as $index => $product) {
-            $order->products()->attach($product, ['quantity' => $request->input('quantities')[$index]]);
-        }
+        $order->products()->attach($request->products);
+        $total_price = 0;
+        foreach ($request->input('products') as $id => $quantity) {
+            $product = Product::FindOrFail($id);
+            $order->total_price += $product->sale_price * $quantity['quantity'];
+            $product->update([
+                'stock' => $product->stock - $quantity['quantity']
+            ]);
+
+        } // end foreach
+        $order->update([
+            'total_price' => $total_price
+        ]);
     }// end of store
 
     public function edit(Client $client, Order $order)

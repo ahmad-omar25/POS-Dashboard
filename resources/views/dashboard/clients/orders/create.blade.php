@@ -85,33 +85,32 @@
                                             @endif
                                     </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="categories m-2">
-                                    <h5>{{__('dashboard.clients.orders.title')}}</h5>
-                                    <div class="card-content collapse show">
-                                        <div class="table-responsive">
-                                            <table class="table">
-                                                <thead class="bg-success white">
-                                                <tr>
-                                                    <th>{{__('dashboard.'.$routeName.'.product')}}</th>
-                                                    <th>{{__('dashboard.'.$routeName.'.quantity')}}</th>
-                                                    <th>{{__('dashboard.'.$routeName.'.purchase_price')}}</th>
-                                                    <th>{{__('dashboard.'.$routeName.'.delete')}}</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody class="order-list">
-                                                </tbody>
-                                            </table>
-                                            <h5 style="margin-right: 20px">{{__('dashboard.'.$routeName.'.total-price')}} :
-                                                <span class="total-price">0</span>
-                                            </h5>
-                                            <button id="add-order-btn" class="btn btn-info btn-block disabled"><i class="ft-plus-circle" style="margin: -2px -32px;font-size: 21px;position: absolute;"></i>{{__('dashboard.clients.orders.add_order')}}</button>
-                                        </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="categories m-2">
+                                <h5>{{__('dashboard.clients.orders.title')}}</h5>
+                                <div class="card-content collapse show">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead class="bg-success white">
+                                            <tr>
+                                                <th>{{__('dashboard.'.$routeName.'.product')}}</th>
+                                                <th>{{__('dashboard.'.$routeName.'.quantity')}}</th>
+                                                <th>{{__('dashboard.'.$routeName.'.purchase_price')}}</th>
+                                                <th>{{__('dashboard.'.$routeName.'.delete')}}</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody class="order-list">
+                                            </tbody>
+                                        </table>
+                                        <h5 style="margin-right: 20px">{{__('dashboard.'.$routeName.'.total-price')}} :
+                                            <span class="total-price">0</span>
+                                        </h5>
+                                        <button id="add-order-btn" class="btn btn-info btn-block disabled"><i class="ft-plus-circle" style="margin: -2px -32px;font-size: 21px;position: absolute;"></i>{{__('dashboard.clients.orders.add_order')}}</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                     </form>
                 </div>
                 <div class="card-content collpase show">

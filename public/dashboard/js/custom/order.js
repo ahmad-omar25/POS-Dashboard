@@ -9,8 +9,7 @@ $(document).ready(function () {
         var html =
             `<tr>
                 <td>${name}</td>
-                <input type="hidden" name="products[]" value="${id}">
-                <td><input type="number" name="quantities[]" data-price="${price}" class="form-control product-quantity" min="1" value="1"></td>
+                <td><input type="number" name="products[${id}][quantity]" data-price="${price}" class="form-control product-quantity" min="1" value="1"></td>
                 <td class="product-price">${price}</td>
                 <td><button class="btn btn-danger btn-sm remove-product-btn" data-id="${id}"><span class="la la-trash-o"></span></button></td>
             </tr>`;

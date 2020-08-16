@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 
@@ -18,7 +19,8 @@ class DashboardController extends Controller
     public function create()
     {
         $routeName = $this->routeName();
-        return view('dashboard.'.$routeName.'.create', compact( 'routeName'));
+        $categories = Category::get();
+        return view('dashboard.'.$routeName.'.create', compact( 'routeName', 'categories'));
     } // End of create
 
     public function edit($id) {
