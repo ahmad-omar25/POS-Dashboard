@@ -11,6 +11,9 @@
             @if(auth()->user()->hasPermission('clients_read'))
                 <li class="dashboard"><a href="{{route('clients.index')}}"><i class="la la-navicon"></i><span>{{__('dashboard.clients.title')}}</span></a></li>
             @endif
+            @if(auth()->user()->hasPermission('orders_read'))
+                <li class="dashboard"><a href="{{route('orders.index')}}"><i class="la la-navicon"></i><span>{{__('dashboard.orders.title')}}</span></a></li>
+            @endif
             @if(auth()->user()->hasPermission('users_read'))
                 <li class="dashboard"><a href="{{route('users.index')}}"><i class="la la-navicon"></i><span>{{__('dashboard.users.title')}}</span></a></li>
             @endif

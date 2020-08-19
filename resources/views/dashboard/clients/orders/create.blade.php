@@ -21,7 +21,7 @@
                     <form action="{{route($routeName.'.store', $client->id)}}" method="POST">
                         @csrf
                         <div class="row match-height">
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 @if (isset($categories))
                                     <div class="categories m-2">
                                         <h5>{{__('dashboard.categories.title')}}</h5>
@@ -85,40 +85,33 @@
                                             @endif
                                     </div>
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="categories m-2">
-                                <h5>{{__('dashboard.clients.orders.title')}}</h5>
-                                <div class="card-content collapse show">
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <thead class="bg-success white">
-                                            <tr>
-                                                <th>{{__('dashboard.'.$routeName.'.product')}}</th>
-                                                <th>{{__('dashboard.'.$routeName.'.quantity')}}</th>
-                                                <th>{{__('dashboard.'.$routeName.'.purchase_price')}}</th>
-                                                <th>{{__('dashboard.'.$routeName.'.delete')}}</th>
-                                            </tr>
-                                            </thead>
-                                            <tbody class="order-list">
-                                            </tbody>
-                                        </table>
-                                        <h5 style="margin-right: 20px">{{__('dashboard.'.$routeName.'.total-price')}} :
-                                            <span class="total-price">0</span>
-                                        </h5>
-                                        <button id="add-order-btn" class="btn btn-info btn-block disabled"><i class="ft-plus-circle" style="margin: -2px -32px;font-size: 21px;position: absolute;"></i>{{__('dashboard.clients.orders.add_order')}}</button>
+                            <div class="col-md-12">
+                                <div class="categories m-2">
+                                    <h5>{{__('dashboard.clients.orders.title')}}</h5>
+                                    <div class="card-content collapse show">
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead class="bg-success white">
+                                                <tr>
+                                                    <th>{{__('dashboard.'.$routeName.'.product')}}</th>
+                                                    <th>{{__('dashboard.'.$routeName.'.quantity')}}</th>
+                                                    <th>{{__('dashboard.'.$routeName.'.purchase_price')}}</th>
+                                                    <th>{{__('dashboard.'.$routeName.'.delete')}}</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody class="order-list">
+                                                </tbody>
+                                            </table>
+                                            <h5 style="margin-right: 20px">{{__('dashboard.'.$routeName.'.total-price')}} :
+                                                <span class="total-price">0</span>
+                                            </h5>
+                                            <button id="add-order-btn" class="btn btn-info btn-block disabled"><i class="ft-plus-circle" style="margin: -2px -32px;font-size: 21px;position: absolute;"></i>{{__('dashboard.clients.orders.add_order')}}</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </form>
-                </div>
-                <div class="card-content collpase show">
-                    <div class="card-body">
-                        <form class="form" action="" method="">
-                            @include('dashboard.shared.buttons.add')
-                        </form>
-                    </div>
                 </div>
             </div>
 

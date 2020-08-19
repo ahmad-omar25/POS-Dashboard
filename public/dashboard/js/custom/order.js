@@ -39,6 +39,18 @@ $(document).ready(function () {
         });
     });
 
+    $('.order_products').on('click', function (e) {
+        e.preventDefault();
+        var url = $(this).data('url');
+        var method = $(this).data('method');
+        $.ajax({
+            url: url,
+            method: method,
+            success: function (data) {
+
+            }
+        });
+    }); // end of order products
 
 
 }); // end of document ready

@@ -34,7 +34,11 @@ Route::group(
 
             // Clients Routes
             Route::resource('clients', 'ClientController')->except('show');
-            Route::resource('clients.orders', 'OrderController')->except('show');
+            Route::resource('clients.orders', 'Client\OrderController')->except('show');
+
+            // Orders Routes
+            Route::resource('orders', 'OrderController')->except('show');
+            Route::get('/orders/{orders}/products', 'OrderController@products')->name('orders.products');
 
             // Dashboard Route
             Route::get('dashboard', 'HomeController@index')->name('admin');

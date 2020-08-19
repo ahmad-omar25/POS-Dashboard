@@ -46,4 +46,29 @@ class ClientController extends DashboardController
         alert()->success(__('global.update_successfully'));
         return redirect()->route($routeName.'.index');
     }
+
+    public function destroy($id) {
+        try {
+
+            $routeName = $this->routeName();
+            $client =  $this->model::findOrFail($id);
+            if (!$client) {
+                alert()->error(__('global.error_message'));
+                return redirect()->route($routeName.'.index');
+            } else {
+                $clients = $client->orders();
+                if (isset($clients) && $clients->count() > 0) {
+                    alert()->error(__('global.delete_error'));
+                    return redirect()->route($routeName.'.index');
+                } else {
+                    $client->delete();
+                }
+            }
+            alert()->success(__('global.delete_successfully'));
+            return redirect()->route($routeName.'.index');
+        } catch (\Exception $exception) {
+            alert()->error(__('global.error_message'));
+            return redirect()->route($routeName.'.index');
+        }
+    }
 }

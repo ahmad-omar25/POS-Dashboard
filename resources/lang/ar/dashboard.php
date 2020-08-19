@@ -94,4 +94,14 @@ return [
         'all' => 'كل الاقسام',
         'add_order' => 'اضف طلب',
     ],
+    'orders' => [
+        'title' => 'الطلبات',
+        'client_name' => 'اسم العميل',
+        'price' => 'السعر',
+        'created_at' => 'تم اضافتة',
+        'show_products' => 'عرض المنتجات',
+        'name' => 'الاسم',
+        'quantity' => 'الكمية',
+        'personal_information' => 'بيانات الطلب',
+    ],
 ];

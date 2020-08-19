@@ -13,6 +13,7 @@ return [
     'delete_data' => 'حذف البيانات',
     'delete_message' => 'هل انت متاكد من حذف ',
     'close' => 'اغلاق',
+    'show' => 'عرض',
     'ok_delete' => 'موافق',
     'edit' => 'تعديل',
     'control' => 'حذف او تعديل البيانات',
