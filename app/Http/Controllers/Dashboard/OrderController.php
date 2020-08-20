@@ -31,8 +31,10 @@ class OrderController extends DashboardController
         return view('dashboard.' . $routeName . '.index', compact('rows', 'routeName'));
     }// end of index
 
-    public function products(Order $order) {
-        $products = $order->products()->get();
-        return view('dashboard.orders._products', compact('products', 'order'));
+    public function products($id)
+    {
+        $routeName = $this->routeName();
+        $orders = Order::with('products')->find($id);
+        return view('dashboard.orders._products', compact('orders', 'routeName'));
     }
 }

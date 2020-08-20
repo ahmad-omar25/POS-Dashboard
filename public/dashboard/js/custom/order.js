@@ -41,13 +41,15 @@ $(document).ready(function () {
 
     $('.order_products').on('click', function (e) {
         e.preventDefault();
+        $('.loader').css('display', 'block');
         var url = $(this).data('url');
         var method = $(this).data('method');
         $.ajax({
             url: url,
             method: method,
             success: function (data) {
-
+                $('.loader').css('display', 'none')
+                $('#order-product-list').append(data);
             }
         });
     }); // end of order products

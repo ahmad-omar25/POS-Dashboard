@@ -103,5 +103,7 @@ return [
         'name' => 'الاسم',
         'quantity' => 'الكمية',
         'personal_information' => 'بيانات الطلب',
+        'total_price' => 'المجموع',
+        'print' => 'طباعة',
     ],
 ];
