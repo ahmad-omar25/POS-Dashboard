@@ -15,20 +15,15 @@
     </div>
     <div class="row">
         @php $input = "phone" @endphp
-        <div class="form-group col-6 mb-2">
+        <div class="form-group col-12 mb-2">
             <label for="{{$input}}">{{__('dashboard.'.$routeName.'.phone')}}</label>
-            <input type="text" id="{{$input}}" class="form-control @error('phone.0') is-invalid @enderror" name="{{$input}}[]"
-                   value="{{$row->phone[0] ?? ''}} ">
-            @error('phone.0')
+            <input type="text" id="{{$input}}" class="form-control @error('phone') is-invalid @enderror" name="{{$input}}"
+                   value="{{$row->phone ?? ''}} ">
+            @error('phone')
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
             </span>
             @enderror
-        </div>
-        <div class="form-group col-6 mb-2">
-            <label for="{{$input}}">{{__('dashboard.'.$routeName.'.another_phone')}}</label>
-            <input type="text" id="{{$input}}" class="form-control" name="{{$input}}[]"
-                   value="{{$row->phone[1] ?? ''}} ">
         </div>
     </div>
     <div class="row">

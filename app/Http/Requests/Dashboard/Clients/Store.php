@@ -25,8 +25,7 @@ class Store extends FormRequest
     {
         return [
             'name' => 'required',
-            'phone' => 'required|array|min:1|unique:clients,phone',
-            'phone.0' => 'required|unique:clients,phone',
+            'phone' => 'required|unique:clients,phone',
             'address' => 'required',
         ];
     }

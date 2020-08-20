@@ -23,10 +23,15 @@
                                 <div class="col-md-2">
                                     <fieldset class="checkboxsas">
                                         <label>
-                                            <input type="checkbox" name="permissions[]" value="{{$model}}_{{$map}}"> {{__('global.' . $map)}}
+                                            <input type="checkbox" class="@error('permissions') is-invalid @enderror" name="permissions[]" value="{{$model}}_{{$map}}"> {{__('global.' . $map)}}
                                         </label>
                                     </fieldset>
                                 </div>
+                                @error('permissions')
+                                <span class="invalid-feedback" role="alert">
+                                   <strong>{{ $message }}</strong>
+                                 </span>
+                                @enderror
                             @endforeach
                         </div>
                     </div>

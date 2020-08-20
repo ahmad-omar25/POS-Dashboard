@@ -34,7 +34,6 @@ class ClientController extends DashboardController
     public function store(Store $request) {
         $routeName = $this->routeName();
         $request_data = $request->all();
-        $request_data['phone'] = array_filter($request->phone);
         $this->model::create($request_data);
         alert()->success(__('global.add_successfully'));
         return redirect()->route($routeName.'.index');

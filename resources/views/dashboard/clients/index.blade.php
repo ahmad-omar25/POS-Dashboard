@@ -24,7 +24,7 @@
                                 <tr>
                                     <td>{{$index + 1}}</td>
                                     <td>{{$row->name}}</td>
-                                    <td>{{implode(" - ", $row->phone)}}</td>
+                                    <td>{{$row->phone}}</td>
                                     <td>{{$row->address}}</td>
                                     <td>
                                         @if(auth()->user()->hasPermission('orders_create'))
