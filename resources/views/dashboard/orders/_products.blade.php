@@ -1,4 +1,5 @@
 <div class="table-responsive mb-2">
+    <div class="loader" style="display: none"></div>
     <table class="table">
         <thead class="bg-success white">
         <tr>

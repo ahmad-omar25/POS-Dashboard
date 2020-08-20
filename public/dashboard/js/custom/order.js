@@ -48,7 +48,8 @@ $(document).ready(function () {
             url: url,
             method: method,
             success: function (data) {
-                $('.loader').css('display', 'none')
+                $('.loader').css('display', 'none');
+                $('#order-product-list').empty();
                 $('#order-product-list').append(data);
             }
         });

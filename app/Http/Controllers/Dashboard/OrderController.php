@@ -37,4 +37,21 @@ class OrderController extends DashboardController
         $orders = Order::with('products')->find($id);
         return view('dashboard.orders._products', compact('orders', 'routeName'));
     }
+    public function destroy($id) {
+        try {
+            $routeName = $this->routeName();
+            $order = Order::find($id);
+            foreach ($order->products as $product) {
+                $product->update([
+                    'stock' => $product->stock + $product->pivot->quantity
+                ]);
+            }
+            $order->delete();
+            alert()->success(__('global.delete_successfully'));
+            return redirect()->route($routeName.'.index');
+        } catch (\Exception $exception) {
+            alert()->error(__('global.error_message'));
+            return redirect()->route($routeName.'.index');
+        }
+    } // End of destroy
 }

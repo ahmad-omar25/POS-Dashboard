@@ -4,15 +4,13 @@
         .table th, .table td {
             padding: 0.75rem !important;
         }
-
         .loader {
-            position: absolute;
             left: 50%;
             top: 50%;
             z-index: 1;
             width: 70px;
             height: 70px;
-            margin: -60px 0 0 -40px;
+            margin: 16px 150px;
             border: 6px solid #f3f3f3;
             border-radius: 50%;
             border-top: 6px solid #3498db;
@@ -110,8 +108,9 @@
                             <div class="col-md-5">
                                 <div class="categories m-2">
                                     <h5>{{__('dashboard.orders.show_products')}}</h5>
+
                                     <div id="order-product-list" class="card-content collapse show">
-                                        <div class="loader" style="display: none"></div>
+
                                     </div>
                                 </div>
                             </div>
@@ -126,4 +125,5 @@
             </div>
         </div>
     </section>
+    @include('sweetalert::alert')
 @endsection
