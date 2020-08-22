@@ -27,8 +27,7 @@ class Update extends FormRequest
             'first_name' => 'required',
             'last_name' => 'required',
             'email' => 'required',
-            'password' => 'required_with:password_confirmation',
-            'password_confirmation' => 'required_with:password',
+            'password' => 'confirmed',
             'permissions' => 'required',
         ];
     }
