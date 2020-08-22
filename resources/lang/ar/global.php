@@ -19,6 +19,10 @@ return [
     'control' => 'حذف او تعديل البيانات',
 
     // Messages
+    'logout' => 'تسجيل خروج',
+    'edit_profile' => 'تعديل الصفحة الشخصية',
+
+    // User
     'add_successfully' => 'تم الحفظ بنجاح ..!',
     'delete_successfully' => 'تم الحذف بنجاح ..!',
     'update_successfully' => 'تم التحديث بنجاح ..!',

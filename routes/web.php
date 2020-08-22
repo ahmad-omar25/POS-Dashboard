@@ -25,6 +25,7 @@ Route::group(
 
             // Users Routes
             Route::resource('users', 'UserController')->except('show');
+            Route::get('users/{user}', 'UserController@profile')->name('user.profile');
 
             // Categories Routes
             Route::resource('categories', 'CategoryController')->except('show');

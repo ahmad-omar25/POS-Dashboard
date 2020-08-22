@@ -72,4 +72,10 @@ class UserController extends DashboardController
             return redirect()->route($routeName.'.index');
         }
     }
+
+    public function profile($id) {
+        $row = $this->model->findOrFail($id);
+        $routeName = $this->routeName();
+        return view('dashboard.users.editProfile', compact('row', 'routeName'));
+    }
 }

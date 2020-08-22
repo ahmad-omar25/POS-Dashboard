@@ -23,7 +23,7 @@
                                 <div class="col-md-2">
                                     <fieldset class="checkboxsas">
                                         <label>
-                                            <input type="checkbox" name="permissions[]" {{$row->hasPermission($model. '_'.$map)? 'checked' : ''}} value="{{$model}}_{{$map}}"> {{__('global.' . $map)}}
+                                            <input type="checkbox" name="permissions[]" {{$row ?? ''->hasPermission($model. '_'.$map)? 'checked' : ''}} value="{{$model}}_{{$map}}"> {{__('global.' . $map)}}
                                         </label>
                                     </fieldset>
                                 </div>
