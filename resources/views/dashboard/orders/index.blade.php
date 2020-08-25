@@ -93,7 +93,6 @@
                                                         <td>{{$row->created_at->toFormattedDateString()}}</td>
                                                         <td>
                                                             @include('dashboard.shared.buttons.show')
-                                                            @include('dashboard.shared.buttons.edit')
                                                             @include('dashboard.shared.buttons.delete')
                                                         </td>
                                                     </tr>
