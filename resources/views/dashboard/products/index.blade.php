@@ -17,7 +17,6 @@
                                 <th>{{__('dashboard.'.$routeName.'.sale_price')}}</th>
                                 <th>{{__('dashboard.'.$routeName.'.profit_percent')}}</th>
                                 <th>{{__('dashboard.'.$routeName.'.stock')}}</th>
-                                <th>{{__('dashboard.'.$routeName.'.image')}}</th>
                                 <th>{{__('global.control')}}</th>
                             </tr>
                             </thead>
@@ -30,9 +29,6 @@
                                         <td>{{$row->sale_price}}</td>
                                         <td>{{$row->profit_percent}} %</td>
                                         <td>{{$row->stock}}</td>
-                                        <td>
-                                            <img src="{{asset($row->image)}}" alt="">
-                                        </td>
                                         <td>
                                             @include('dashboard.shared.buttons.edit')
                                             @include('dashboard.shared.buttons.delete')

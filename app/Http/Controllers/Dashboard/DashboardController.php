@@ -25,9 +25,10 @@ class DashboardController extends Controller
 
     public function edit($id) {
         try {
+            $categories = Category::get();
             $routeName = $this->routeName();
             $row = $this->model->findOrFail($id);
-            return view('dashboard.'.$routeName.'.edit', compact('routeName', 'row'));
+            return view('dashboard.'.$routeName.'.edit', compact('routeName', 'row', 'categories'));
         } catch (\Exception $exception) {
             alert()->error(__('global.error_message'));
             return redirect()->route($routeName.'.index');

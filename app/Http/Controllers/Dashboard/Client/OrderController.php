@@ -31,7 +31,7 @@ class OrderController extends Controller
 
     public function create(Client $client)
     {
-        $categories = Category::get();
+        $categories = Category::with('products')->get();
         $routeName = 'clients.orders';
         return view('dashboard.clients.orders.create', compact('routeName', 'client', 'categories'));
     }// end of create
@@ -57,10 +57,12 @@ class OrderController extends Controller
         return redirect()->route('orders.index');
     }// end of store
 
-    public function edit(Client $client, Order $order)
-    {
-
-    }// end of edit
+//    public function edit(Client $client, Order $order)
+//    {
+//        $routeName = 'clients.orders';
+//        $categories = Category::with('products')->get();
+//        return view('dashboard.clients.orders.edit', compact('client', 'order', 'routeName', 'categories'));
+//    }// end of edit
 
     public function update(Request $request, Client $client, Order $order)
     {

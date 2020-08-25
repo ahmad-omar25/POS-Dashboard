@@ -90,19 +90,4 @@
             @enderror
         </div>
     </div>
-    <div class="row">
-        @php $input = "image" @endphp
-        <div class="form-group col-12 mb-2">
-            <label>{{__('dashboard.'.$routeName.'.image')}}</label>
-            <label id="projectinput7" class="file center-block form-control @error($input) is-invalid @enderror">
-                <input type="file" name="{{$input}}" id="file">
-                <span class="file-custom"></span>
-            </label>
-            @error($input)
-            <span class="invalid-feedback" role="alert">
-                <strong>{{ $message }}</strong>
-            </span>
-            @enderror
-        </div>
-    </div>
 </div>

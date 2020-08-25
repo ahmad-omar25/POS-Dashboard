@@ -21,6 +21,7 @@ return [
     // Messages
     'logout' => 'تسجيل خروج',
     'edit_profile' => 'تعديل الصفحة الشخصية',
+    'language' => 'اللغة',
 
     // User
     'add_successfully' => 'تم الحفظ بنجاح ..!',
