@@ -41,8 +41,8 @@
               <span class="avatar avatar-online">
                   <img src="{{asset('dashboard/images/portrait/small/avatar-s-19.png')}}" alt="avatar"><i></i></span>
             </a>
-            <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="{{route('user.profile', auth()->user()->id)}}"><i
-                  class="ft-user"></i>{{ __('global.edit_profile') }}</a>
+            <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#">
+                    <i class="ft-user"></i>{{ __('global.edit_profile') }}</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="{{ route('logout') }}"
                  onclick="event.preventDefault();document.getElementById('logout-form').submit();"><i
