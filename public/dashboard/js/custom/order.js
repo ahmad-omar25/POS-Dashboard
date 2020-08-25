@@ -55,6 +55,9 @@ $(document).ready(function () {
         });
     }); // end of order products
 
+    $(document).on('click', '.print_product', function () {
+        $('.print-area').printThis();
+    })
 
 }); // end of document ready
 

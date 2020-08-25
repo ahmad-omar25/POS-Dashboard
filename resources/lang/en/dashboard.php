@@ -1,35 +1,109 @@
 <?php
 
 return [
-  // Users Languages
-  'users' => [
-    'title' => 'Users Managers',
-    'title_singular' => 'User Manager',
-    'create' => 'Create User Manager',
-    'update' => 'Update User Manager',
-    'title_views' => 'View All',
-    'personal_information' => 'User Information',
-    'first_name' => 'Firs Name',
-    'last_name' => 'Last Name',
-    'email' => 'Email',
-    'password' => 'Password',
-    'password_confirmation' => 'Password Confirmation',
-    'name' => 'Name',
-  ],
+    // Users Languages
+    'users' => [
+        'title' => 'Users Managers',
+        'title_singular' => 'User Manager',
+        'create' => 'Create User Manager',
+        'update' => 'Update User Manager',
+        'title_views' => 'View All',
+        'personal_information' => 'User Information',
+        'first_name' => 'Firs Name',
+        'last_name' => 'Last Name',
+        'email' => 'Email',
+        'password' => 'Password',
+        'password_confirmation' => 'Password Confirmation',
+        'name' => 'Name',
+    ],
 
-  // Categories Languages
-  'categories' => [
-    'ar' => [
-      'name' => 'The name is in Arabic',
+    // Categories Languages
+    'categories' => [
+        'ar' => [
+            'name' => 'The name is in Arabic',
+        ],
+        'en' => [
+            'name' => 'The name is in English',
+        ],
+        'title' => 'Categories',
+        'title_singular' => 'Category',
+        'personal_information' => 'Category Information',
+        'create' => 'Create Category',
+        'update' => 'Update Category',
+        'name' => 'Name',
+        'products_count' => 'Products Count',
+        'related_products' => 'Related Products',
+        'all' => 'All Categories',
     ],
-    'en' => [
-      'name' => 'The name is in English',
+    // Products Languages
+    'products' => [
+        'ar' => [
+            'name' => 'The name is in Arabic',
+            'description' => 'Description in Arabic',
+        ],
+        'en' => [
+            'name' => 'The name is in English',
+            'description' => 'Description in English',
+        ],
+        'title' => 'Products',
+        'category_id' => 'Category',
+        'purchase_price' => 'Purchase Price',
+        'sale_price' => 'Sale Price',
+        'profit_percent' => 'Profit Percent %',
+        'stock' => 'Stock',
+        'image' => 'Image',
+        'title_singular' => 'Product',
+        'personal_information' => 'Product Information',
+        'create' => 'Create Product',
+        'update' => 'Update Product',
+        'name' => 'Name',
     ],
-    'title' => 'Categories',
-    'title_singular' => 'Category',
-    'personal_information' => 'Category Information',
-    'create' => 'Create Category',
-    'update' => 'Update Category',
-    'name' => 'Name',
-  ],
+
+    // Clients Languages
+    'clients' => [
+        'orders' => [
+            'purchase_price' => 'Purchase Price',
+            'add' => 'Add',
+            'stock' => 'Stock',
+            'title' => 'Orders',
+            'product' => 'Product',
+            'quantity' => 'Quantity',
+            'total-price' => 'Total Price',
+            'delete' => 'Delete',
+            'title_singular' => 'Order',
+            'personal_information' => 'Order Information',
+            'create' => 'Create Order',
+            'update' => 'Update Order',
+            'name' => 'Name',
+            'phone' => 'Phone',
+            'another_phone' => 'رقم الهاتف اخر ( اختياري )',
+            'address' => 'Address',
+            'all' => 'All Categories',
+            'orders' => 'Orders',
+            'add_order' => 'Add Order',
+        ],
+        'title' => 'Clients',
+        'title_singular' => 'Client',
+        'personal_information' => 'Client Information',
+        'create' => 'Create Client',
+        'update' => 'Update Client',
+        'name' => 'Name',
+        'phone' => 'Phone',
+        'another_phone' => 'رقم الهاتف اخر ( اختياري )',
+        'address' => 'Address',
+        'all' => 'All Categories',
+        'add_order' => 'Add Order',
+    ],
+    'orders' => [
+        'title' => 'Orders',
+        'client_name' => 'Client Name',
+        'price' => 'Price',
+        'created_at' => 'Created AT',
+        'show_products' => 'Show Product',
+        'name' => 'Name',
+        'quantity' => 'Quantity',
+        'personal_information' => 'Order Information',
+        'total_price' => 'Total Price',
+        'print' => 'Print',
+    ],
 ];

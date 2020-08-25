@@ -1,4 +1,4 @@
-<div class="table-responsive mb-2">
+<div class="table-responsive print-area mb-2">
     <div class="loader" style="display: none"></div>
     <table class="table">
         <thead class="bg-success white">
@@ -23,5 +23,6 @@
     <h3 style="margin-right: 20px">{{__('dashboard.'.$routeName.'.total_price')}} :
         <span class="total-price">{{number_format($orders->total_price, 2)}}</span>
     </h3>
-    <button class="btn btn-info btn-sm btn-block order_products">{{__('dashboard.orders.print')}} <i class="ft-edit"></i></button>
+
 </div>
+<button class="btn btn-info btn-sm btn-block print_product">{{__('dashboard.orders.print')}} <i class="ft-edit"></i></button>

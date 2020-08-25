@@ -14,8 +14,8 @@
 <script src="{{asset('dashboard/js/scripts/forms/switch.js')}}" type="text/javascript"></script>
 <script src="{{asset('dashboard/vendors/js/forms/select/select2.full.min.js')}}" type="text/javascript"></script>
 <script src="{{asset('dashboard/js/scripts/forms/select/form-select2.js')}}" type="text/javascript"></script>
-
 <!-- BEGIN PAGE VENDOR JS-->
+<script src="{{asset('dashboard/js/printThis.js')}}" type="text/javascript"></script>
 <script src="{{asset('dashboard/vendors/js/charts/chart.min.js')}}" type="text/javascript"></script>
 <script src="{{asset('dashboard/vendors/js/charts/echarts/echarts.js')}}" type="text/javascript"></script>
 

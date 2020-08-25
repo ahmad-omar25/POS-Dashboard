@@ -8,8 +8,8 @@
                         <div class="card-body">
                             <div class="media d-flex">
                                 <div class="media-body text-left">
-                                    <h3 class="info">850</h3>
-                                    <h6>Products Sold</h6>
+                                    <h3 class="info">{{$products}}</h3>
+                                    <h6>{{__('global.products')}}</h6>
                                 </div>
                                 <div>
                                     <i class="icon-basket-loaded info font-large-2 float-right"></i>
@@ -29,8 +29,8 @@
                         <div class="card-body">
                             <div class="media d-flex">
                                 <div class="media-body text-left">
-                                    <h3 class="warning">$748</h3>
-                                    <h6>Net Profit</h6>
+                                    <h3 class="danger">{{$orders}}</h3>
+                                    <h6>{{__('global.orders')}}</h6>
                                 </div>
                                 <div>
                                     <i class="icon-pie-chart warning font-large-2 float-right"></i>
@@ -51,8 +51,8 @@
                         <div class="card-body">
                             <div class="media d-flex">
                                 <div class="media-body text-left">
-                                    <h3 class="success">146</h3>
-                                    <h6>New Customers</h6>
+                                    <h3 class="success">{{$clients}}</h3>
+                                    <h6>{{__('global.clients')}}</h6>
                                 </div>
                                 <div>
                                     <i class="icon-user-follow success font-large-2 float-right"></i>
@@ -73,8 +73,8 @@
                         <div class="card-body">
                             <div class="media d-flex">
                                 <div class="media-body text-left">
-                                    <h3 class="danger">99.89 %</h3>
-                                    <h6>Customer Satisfaction</h6>
+                                    <h3 class="danger">{{$orders}}</h3>
+                                    <h6>{{__('global.orders')}}</h6>
                                 </div>
                                 <div>
                                     <i class="icon-heart danger font-large-2 float-right"></i>

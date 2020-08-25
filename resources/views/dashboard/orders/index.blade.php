@@ -10,7 +10,7 @@
             z-index: 1;
             width: 70px;
             height: 70px;
-            margin: 16px 150px;
+            margin: 16px 105px;
             border: 6px solid #f3f3f3;
             border-radius: 50%;
             border-top: 6px solid #3498db;
@@ -69,7 +69,7 @@
                     </div>
                     @if(isset($rows) && $rows->count() > 0)
                         <div class="row match-height">
-                            <div class="col-md-7">
+                            <div class="col-md-8">
                                 <div class="categories m-2">
                                     <h5>{{__('dashboard.clients.orders.title')}}</h5>
                                     <div class="card-content collapse show">
@@ -105,7 +105,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-5">
+                            <div class="col-md-4">
                                 <div class="categories m-2">
                                     <h5>{{__('dashboard.orders.show_products')}}</h5>
 

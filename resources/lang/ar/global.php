@@ -23,7 +23,7 @@ return [
     'edit_profile' => 'تعديل الصفحة الشخصية',
     'language' => 'اللغة',
 
-    // User
+    // Messages
     'add_successfully' => 'تم الحفظ بنجاح ..!',
     'delete_successfully' => 'تم الحذف بنجاح ..!',
     'update_successfully' => 'تم التحديث بنجاح ..!',
@@ -35,4 +35,12 @@ return [
     'create' => 'اضافة',
     'update' => 'تعديل',
     'hello' => 'مرحبا,',
+    'back' => 'رجوع',
+    'save' => 'حفظ',
+
+    // Login Page
+    'login_page' => 'تسجيل الدخول',
+    'email' => 'ادخل البريد الالكتروني',
+    'password' => 'ادخل كلمة المرور',
+    'remember_me' => 'تذكرني',
 ];
