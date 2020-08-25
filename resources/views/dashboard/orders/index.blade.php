@@ -10,7 +10,7 @@
             z-index: 1;
             width: 70px;
             height: 70px;
-            margin: 16px 105px;
+            margin: 16px 150px;
             border: 6px solid #f3f3f3;
             border-radius: 50%;
             border-top: 6px solid #3498db;
