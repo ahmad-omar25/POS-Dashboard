@@ -69,7 +69,7 @@
                     </div>
                     @if(isset($rows) && $rows->count() > 0)
                         <div class="row match-height">
-                            <div class="col-md-8">
+                            <div class="col-md-7">
                                 <div class="categories m-2">
                                     <h5>{{__('dashboard.clients.orders.title')}}</h5>
                                     <div class="card-content collapse show">
@@ -104,7 +104,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-5">
                                 <div class="categories m-2">
                                     <h5>{{__('dashboard.orders.show_products')}}</h5>
 
