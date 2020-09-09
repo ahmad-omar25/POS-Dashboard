@@ -28,7 +28,7 @@
                                     <form class="form-horizontal form-simple" method="POST" action="{{ route('login') }}" novalidate>
                                         @csrf
                                         <fieldset class="form-group position-relative has-icon-left mb-2">
-                                            <input type="text" name="email" value="{{ old('email') }}" class="form-control form-control-lg input-lg @error('password') is-invalid @enderror" id="email" placeholder="{{__('global.email')}}"
+                                            <input type="text" name="email" value="super_admin@app.com" class="form-control form-control-lg input-lg @error('password') is-invalid @enderror" id="email" placeholder="{{__('global.email')}}"
                                                    required>
                                             <div class="form-control-position">
                                                 <i class="ft-user"></i>
@@ -40,7 +40,7 @@
                                             @enderror
                                         </fieldset>
                                         <fieldset class="form-group position-relative has-icon-left">
-                                            <input type="password" name="password" class="form-control form-control-lg input-lg @error('password') is-invalid @enderror" id="password"
+                                            <input type="password" name="password" value="111222" class="form-control form-control-lg input-lg @error('password') is-invalid @enderror" id="password"
                                                    placeholder="{{__('global.password')}}" required>
                                             <div class="form-control-position">
                                                 <i class="la la-key"></i>
